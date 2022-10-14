@@ -8,7 +8,6 @@ public class OmarAbbas {
 		System.out.print("Hello, " + s);
 	}
 }
-
 ```
 ### B.Basic Data Types
 ```java
@@ -25,7 +24,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### C.Simple Calculator
 ```java
@@ -41,7 +39,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### D.Difference
 ```java
@@ -57,7 +54,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### E.Area of a Circle
 ```java
@@ -71,7 +67,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### F.Digits Summation
 ```java
@@ -90,7 +85,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### G.Summation from 1 to N
 ```java
@@ -103,7 +97,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### H.Two numbers
 ```java
@@ -126,7 +119,6 @@ public class OmarAbbas {
 
 	}
 }
-
 ```
 ### I.Welcome for you with Conditions
 ```java
@@ -158,7 +150,6 @@ public class OmarAbbas {
 
 	}
 }
-
 ```
 ### K.Maxand Min
 ```java
@@ -179,7 +170,6 @@ public class OmarAbbas {
 		System.out.printf("%d %d", min(a, b, c), max(a, b, c));
 	}
 }
-
 ```
 ### K.Maxand Min
 ```java
@@ -203,7 +193,6 @@ public class OmarAbbas {
 		return Collections.min(Arrays.asList(vals));
 	}
 }
-
 ```
 ### L.The Brothers
 ```java
@@ -220,7 +209,6 @@ public class OmarAbbas {
 		System.out.println(a.equals(b) ? "ARE Brothers" : "NOT");
 	}
 }
-
 ```
 ### M.Capital or Small or Digit
 ```java
@@ -246,7 +234,6 @@ public class OmarAbbas {
 		}
 	}
 }
-
 ```
 ### N.Char
 ```java
@@ -264,7 +251,6 @@ public class OmarAbbas {
 
 	}
 }
-
 ```
 ### O.Calculator
 ```java
@@ -294,8 +280,6 @@ public class OmarAbbas {
 		else if (sign == '/')System.out.println(a / b);
 	}
 }
-
-
 ```
 ### P.First digit !
 ```java
@@ -326,7 +310,6 @@ public class OmarAbbas {
 		}
 	}
 }
-
 ```
 ### Q.Coordinates of a Point
 ```java
@@ -361,7 +344,6 @@ public class OmarAbbas {
 		}
 	}
 }
-
 ```
 ### R.Age in Days
 ```java
@@ -380,7 +362,6 @@ public class OmarAbbas {
 		System.out.println(x + " days");
 	}
 }
-
 ```
 ### S.Interval
 ```java
@@ -399,7 +380,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### T.Sort Numbers
 ```java
@@ -416,7 +396,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### T.Sort Numbers
 ```java
@@ -445,7 +424,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### U.Float or int
 ```java
@@ -466,7 +444,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### V.Comparison
 ```java
@@ -485,7 +462,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### W.Mathematical Expression
 ```java
@@ -510,7 +486,6 @@ public class OmarAbbas {
 	}
 
 }
-
 ```
 ### X.Two intervals
 ```java
@@ -526,7 +501,6 @@ public class OmarAbbas {
 
 	}
 }
-
 ```
 ### Y.The last 2 digits
 ```java
@@ -544,7 +518,6 @@ public class OmarAbbas {
 		System.out.println(mul < 10 ? "0" + mul : mul);
 	}
 }
-
 ```
 ### Z.Hard Compare
 ```java
@@ -684,5 +657,4 @@ public class OmarAbbas {
 		}
 	}
 }
-
 ```
