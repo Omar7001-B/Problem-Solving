@@ -18,7 +18,6 @@ public class OmarAbbas {
 		Scanner in = new Scanner(System.in);
 		int x = in.nextInt();
 		long y = in.nextLong();
-		// String whole=in.nextLine();
 		char a = in.next().charAt(0);
 		float f = in.nextFloat();
 		double d = in.nextDouble();
@@ -148,7 +147,7 @@ public class OmarAbbas {
 ```java
 import java.util.Scanner;
 
-public class Main {
+public class OmarAbbas {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int a = input.nextInt(), b = input.nextInt();
