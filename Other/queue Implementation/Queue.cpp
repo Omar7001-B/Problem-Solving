@@ -18,7 +18,7 @@ Queue<T>::~Queue() {
 
 template<typename T>
 bool Queue<T>::empty() {
-	return (front == -1 && i_back == -1);
+	return (i_front == -1 && i_back == -1);
 }
 
 template<typename T>
