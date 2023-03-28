@@ -6,69 +6,70 @@
 #include "Queue.h"
 template<typename T>
 Queue<T>::Queue(int size) {
-	arr = new T[size];
-	i_front = -1;
-	i_back = -1;
+    capacity = size;
+    arr = new T[capacity];
+    i_front = -1;
+    i_back = -1;
 }
 
 template<typename T>
 Queue<T>::~Queue() {
-	delete[] arr;
+    delete[] arr;
 }
 
 template<typename T>
 bool Queue<T>::empty() {
-	return (i_front == -1 && i_back == -1);
+    return (i_front == -1 && i_back == -1);
 }
 
 template<typename T>
 void Queue<T>::push(T val) {
-	if (i_back == size - 1) {
-		std::cout << "Queue is full\n";
-		return;
-	}
-	else if (empty()) {
-		i_front = 0;
-		i_back = 0;
-	}
-	else {
-		i_back++;
-	}
-	arr[i_back] = val;
+    if (i_back == capacity - 1) {
+        std::cout << "Queue is full\n";
+        return;
+    }
+    else if (empty()) {
+        i_front = 0;
+        i_back = 0;
+    }
+    else {
+        i_back++;
+    }
+    arr[i_back] = val;
 }
 
 template<typename T>
 void Queue<T>::pop() {
-	if (empty()) {
-		std::cout << "Queue is empty\n";
-		return;
-	}
-	else if (i_front == i_back) {
-		i_front = -1;
-		i_back = -1;
-	}
-	else {
-		i_front++;
-	}
+    if (empty()) {
+        std::cout << "Queue is empty\n";
+        return;
+    }
+    else if (i_front == i_back) {
+        i_front = -1;
+        i_back = -1;
+    }
+    else {
+        i_front++;
+    }
 }
 
 template<typename T>
 int Queue<T>::size() {
-	if (empty()) {
-		return 0;
-	}
-	else {
-		return (i_back - i_front) + 1;
-	}
+    if (empty()) {
+        return 0;
+    }
+    else {
+        return (i_back - i_front) + 1;
+    }
 }
 
 template <typename T>
 T Queue<T>::front() {
-	if (empty()) {
-		std::cout << "Queue is empty\n";
-		return -1;
-	}
-	else {
-		return arr[i_front];
-	}
+    if (empty()) {
+        std::cout << "Queue is empty\n";
+        return -1;
+    }
+    else {
+        return arr[i_front];
+    }
 }
