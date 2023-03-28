@@ -4,18 +4,15 @@
 template<typename T>
 class Queue {
 private:
-    T *arr;
-    int capacity;
-    int front;
-    int back;
+	T* arr;
+	int i_front;
+	int i_back;
 public:
-    Queue(int size);
-    ~Queue();
-    bool empty();
-    void push(T val);
-    void pop();
-    int size();
+	Queue(int size);
+	~Queue();
+	void push(T val);
+	T front();
+	void pop();
+	int size();
+	bool empty();
 };
-
-
-
