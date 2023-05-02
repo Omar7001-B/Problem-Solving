@@ -69,7 +69,7 @@ template <typename T>
 T Queue<T>::front() {
     if (empty()) {
         std::cout << "Queue is empty\n";
-        return -1;
+        return arr[0];
     }
     else {
         return arr[i_front];
