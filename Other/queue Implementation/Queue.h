@@ -23,6 +23,6 @@ public:
     bool empty();
 };
 
-//#include "Queue.cpp"  // make sure to exclude the cpp file before this include
+#include "Queue.cpp"  // make sure to exclude the cpp file before this include
 
 #endif //QUEUE_H
