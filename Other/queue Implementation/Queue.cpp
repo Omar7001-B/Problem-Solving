@@ -4,7 +4,9 @@
 
 #include <iostream>
 #include <string>
-#include "Queue.h"
+// #include "Queue.h" This case is unique
+// First Exclude: exclude this file from the project (Exclude from the auto compile list)
+// Second Add #include "Queue.cpp" at the end of your header file "Queue.h"
 
 template<typename T>
 Queue<T>::Queue(int size) {
