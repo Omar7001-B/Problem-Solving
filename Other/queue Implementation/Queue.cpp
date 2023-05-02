@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <string>
 #include "Queue.h"
 
 template<typename T>
@@ -73,4 +74,33 @@ T Queue<T>::front() {
     else {
         return arr[i_front];
     }
+}
+
+// End of Path: Queue.cpp
+void BURG1() {
+    Queue<int> q(5);
+    q.push(1), q.pop(), q.front(), q.size(), q.empty();
+}
+
+void BURG2() {
+    Queue<long long> q(5);
+    q.push(1), q.pop(), q.front(), q.size(), q.empty();
+}
+void BURG3() {
+    Queue<double> q(5);
+    q.push(1.0), q.pop(), q.front(), q.size(), q.empty();
+}
+void BURG4() {
+    Queue<float> q(5);
+    q.push(2.5), q.pop(), q.front(), q.size(), q.empty();
+}
+
+void BURG5() {
+    Queue<std::string> q(5);
+    q.push("Hello"), q.pop(), q.front(), q.size(), q.empty();
+}
+
+void BURG6() {
+    Queue<char> q(5);
+    q.push('c'), q.pop(), q.front(), q.size(), q.empty();
 }
