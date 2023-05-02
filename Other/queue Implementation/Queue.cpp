@@ -77,6 +77,25 @@ T Queue<T>::front() {
 }
 
 // End of Path: Queue.cpp
+
+void BURG() {
+    Queue<int> q1(5);
+    Queue<long long> q2(5);
+    Queue<double> q3(5);
+    Queue<float> q4(5);
+    Queue<std::string> q5(5);
+    Queue<char> q6(5);
+
+    q1.push(1), q1.pop(), q1.front(), q1.size(), q1.empty();
+    q2.push(1), q2.pop(), q2.front(), q2.size(), q2.empty();
+    q3.push(1.0), q3.pop(), q3.front(), q3.size(), q3.empty();
+    q4.push(2.5), q4.pop(), q4.front(), q4.size(), q4.empty();
+    q5.push("Hello"), q5.pop(), q5.front(), q5.size(), q5.empty();
+    q6.push('c'), q6.pop(), q6.front(), q6.size(), q6.empty();
+}
+
+
+
 void BURG1() {
     Queue<int> q(5);
     q.push(1), q.pop(), q.front(), q.size(), q.empty();
