@@ -81,6 +81,9 @@ T Queue<T>::front() {
 // End of Path: Queue.cpp
 
 void BURG() {
+// You can create an object of a template class in the same source file where it is implemented (TestTemp.cpp).
+// So, there is no need to link the object creation code with its actual implementation in some other file.
+// This will cause the compiler to compile these particular types so the associated class member functions will be available at link time.
     Queue<int> q1(5);
     Queue<long long> q2(5);
     Queue<double> q3(5);
@@ -96,32 +99,3 @@ void BURG() {
     q6.push('c'), q6.pop(), q6.front(), q6.size(), q6.empty();
 }
 
-
-
-void BURG1() {
-    Queue<int> q(5);
-    q.push(1), q.pop(), q.front(), q.size(), q.empty();
-}
-
-void BURG2() {
-    Queue<long long> q(5);
-    q.push(1), q.pop(), q.front(), q.size(), q.empty();
-}
-void BURG3() {
-    Queue<double> q(5);
-    q.push(1.0), q.pop(), q.front(), q.size(), q.empty();
-}
-void BURG4() {
-    Queue<float> q(5);
-    q.push(2.5), q.pop(), q.front(), q.size(), q.empty();
-}
-
-void BURG5() {
-    Queue<std::string> q(5);
-    q.push("Hello"), q.pop(), q.front(), q.size(), q.empty();
-}
-
-void BURG6() {
-    Queue<char> q(5);
-    q.push('c'), q.pop(), q.front(), q.size(), q.empty();
-}
