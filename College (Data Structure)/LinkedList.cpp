@@ -1,0 +1,188 @@
+#include <iostream>
+
+// Node class represents a single node in the linked list
+class Node {
+public:
+    double data;     // Data stored in the node
+    Node* next;      // Pointer to the next node
+
+    Node(double value) : data(value), next(nullptr) {}
+};
+
+// List class represents the linked list
+class List {
+public:
+    List() : head(nullptr) {}
+    // Destructor to free the memory allocated for the nodes
+    ~List() {
+        while (head != nullptr) {
+            Node* temp = head;
+            head = head->next;
+            delete temp;
+        }
+    }
+
+    // Checks if the list is empty
+    bool IsEmpty() {
+        return head == nullptr;
+    }
+
+    // Inserts a new node with data 'x' at the given 'index'
+    // Returns a pointer to the newly inserted node, or nullptr if index is invalid
+    Node* InsertNode(int index, double x) {
+        if (index < 0)
+            return nullptr;
+
+        Node* newNode = new Node(x);
+
+        if (index == 0) {
+            // Inserting at the beginning of the list
+            newNode->next = head;
+            head = newNode;
+        }
+        else {
+            Node* prevNode = GetNode(index - 1);
+            if (prevNode == nullptr) {
+                delete newNode;
+                return nullptr;
+            }
+
+            newNode->next = prevNode->next;
+            prevNode->next = newNode;
+        }
+
+        return newNode;
+    }
+
+    // Finds the index of the first occurrence of a node with data 'x'
+    // Returns the index if found, -1 if not found
+    int FindNode(double x) {
+        int index = 0;
+        Node* current = head;
+
+        while (current != nullptr) {
+            if (current->data == x)
+                return index;
+
+            current = current->next;
+            index++;
+        }
+
+        return -1;  // Node not found
+    }
+
+    // Deletes the first occurrence of a node with data 'x'
+    // Returns the index of the deleted node if found, -1 if not found
+    int DeleteNode(double x) {
+        Node* prevNode = nullptr;
+        Node* current = head;
+        int index = 0;
+
+        while (current != nullptr) {
+            if (current->data == x) {
+                if (prevNode == nullptr) {
+                    // Deleting the first node
+                    head = current->next;
+                }
+                else {
+                    prevNode->next = current->next;
+                }
+
+                delete current;
+                return index;
+            }
+
+            prevNode = current;
+            current = current->next;
+            index++;
+        }
+
+        return -1;  // Node not found
+    }
+
+    // Displays the elements of the list
+    void DisplayList() {
+        Node* current = head;
+
+        while (current != nullptr) {
+            std::cout << current->data << " ";
+            current = current->next;
+        }
+
+        std::cout << std::endl;
+    }
+
+private:
+    Node* head;   // Pointer to the first node in the list
+
+    // Retrieves the node at the given 'index'
+    // Returns a pointer to the node if found, nullptr if index is invalid
+    Node* GetNode(int index) {
+        if (index < 0)
+            return nullptr;
+
+        Node* current = head;
+        int count = 0;
+
+        while (current != nullptr) {
+            if (count == index)
+                return current;
+
+            current = current->next;
+            count++;
+        }
+
+        return nullptr;  // Index out of range
+    }
+};
+
+int main() {
+    // Create a new linked list
+    List myList;
+
+    // Insert nodes into the list
+    myList.InsertNode(0, 5.0);       // Insert at the beginning
+    myList.InsertNode(1, 7.5);       // Insert at index 1
+    myList.InsertNode(2, 10.2);      // Insert at index 2
+    myList.InsertNode(0, 2.3);       // Insert at the beginning again
+
+    // Display the list
+    std::cout << "List elements: ";
+    myList.DisplayList();   // Output: 2.3 5.0 7.5 10.2
+
+    // Search for a node
+    double searchData = 7.5;
+    int searchIndex = myList.FindNode(searchData);
+    if (searchIndex != -1) {
+        std::cout << searchData << " found at index " << searchIndex << std::endl;
+    }
+    else {
+        std::cout << searchData << " not found in the list" << std::endl;
+    }
+
+    // Delete a node
+    double deleteData = 5.0;
+    int deleteIndex = myList.DeleteNode(deleteData);
+    if (deleteIndex != -1) {
+        std::cout << "Deleted " << deleteData << " from index " << deleteIndex << std::endl;
+    }
+    else {
+        std::cout << deleteData << " not found in the list" << std::endl;
+    }
+
+    // Display the updated list
+    std::cout << "Updated list: ";
+    myList.DisplayList();   // Output: 2.3 7.5 10.2
+
+    // Check if the list is empty
+    if (myList.IsEmpty()) {
+        std::cout << "The list is empty" << std::endl;
+    }
+    else {
+        std::cout << "The list is not empty" << std::endl;
+    }
+
+    return 0;
+}
+
+
