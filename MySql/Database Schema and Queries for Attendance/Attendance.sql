@@ -46,6 +46,15 @@ VALUES
 -- Retrieve all records from the 'attendance' table
 SELECT * FROM attendance;
 
+
+
+
+
+
+
+
+
+
 -- ----------------------------------------------------------------------------------------
 -- Count the number of distinct student IDs attending on a specific date ('2023-06-01')
 SELECT COUNT(DISTINCT student_id) AS attendance_count
