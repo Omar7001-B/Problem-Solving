@@ -23,6 +23,19 @@ CREATE TABLE attendance (
     FOREIGN KEY (student_id) REFERENCES students(id)
 );
 
+-- Insert students records
+INSERT INTO students (id, name)
+VALUES
+    (1, 'Omar'),
+    (2, 'Ahmed'),
+    (3, 'Mohamed'),
+    (4, 'Fatima'),
+    (5, 'Aisha'),
+    (6, 'Ali'),
+    (7, 'Layla'),
+    (8, 'Youssef');
+
+
 -- Insert attendance records
 INSERT INTO attendance (date, student_id)
 VALUES
@@ -45,6 +58,9 @@ VALUES
 
 -- Retrieve all records from the 'attendance' table
 SELECT * FROM attendance;
+
+-- Retrieve all records from the 'students' table
+SELECT * FROM students;
 
 -- ----------------------------------------------------------------------------------------
 -- Count the number of distinct student IDs attending on a specific date ('2023-06-01')
